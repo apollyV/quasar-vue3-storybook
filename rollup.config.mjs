@@ -31,7 +31,7 @@ export default [
       },
     ],
     plugins: [
-      vue({ css: false }),
+      vue(),
       css(), // Ajoutez cette ligne
       peerDepsExternal(),
       resolve({
