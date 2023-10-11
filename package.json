@@ -1,0 +1,46 @@
+{
+    "name": "storybook-quasar",
+    "version": "0.0.1",
+    "description": "A Quasar Project",
+    "productName": "Quasar App",
+    "author": "constant_vennin",
+    "private": true,
+    "scripts": {
+        "lint": "eslint --ext .js,.ts,.vue ./",
+        "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+        "test": "echo \"No test specified\" && exit 0",
+        "dev": "quasar dev",
+        "build": "quasar build",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "dependencies": {
+        "@quasar/extras": "^1.16.7",
+        "quasar": "^2.12.7",
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.5"
+    },
+    "devDependencies": {
+        "@quasar/app-vite": "^1.6.2",
+        "@storybook/addon-essentials": "7.4.6",
+        "@storybook/addon-interactions": "7.4.6",
+        "@storybook/addon-links": "7.4.6",
+        "@storybook/blocks": "7.4.6",
+        "@storybook/testing-library": "0.2.2",
+        "@storybook/vue3": "7.4.6",
+        "@storybook/vue3-vite": "7.4.6",
+        "@types/node": "^20.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "autoprefixer": "^10.4.16",
+        "core-js": "^3.33.0",
+        "eslint": "^8.51.0",
+        "eslint-config-prettier": "^8.10.0",
+        "eslint-plugin-storybook": "^0.6.15",
+        "eslint-plugin-vue": "^9.17.0",
+        "prettier": "^2.8.8",
+        "storybook": "7.4.6",
+        "typescript": "^4.9.5",
+        "vite": "^4.4.11"
+    }
+}
