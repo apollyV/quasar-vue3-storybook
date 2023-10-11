@@ -13,18 +13,19 @@ import { babel } from '@rollup/plugin-babel';
 import { createRequire } from 'node:module';
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile('./package.json');
+const version = packageJson.version;
 
 export default [
   {
     input: 'src/index.js',
     output: [
       {
-        file: 'dist/my-component.cjs.js', // spécifiez un chemin de fichier ici
+        file: `dist/astrea-design-system-${version}.cjs.js`,
         format: 'cjs',
         sourcemap: true,
       },
       {
-        file: 'dist/my-component.esm.js', // spécifiez un chemin de fichier ici
+        file: `dist/astrea-design-system-${version}.esm.js`,
         format: 'esm',
         exports: 'named',
         sourcemap: true,
@@ -32,7 +33,9 @@ export default [
     ],
     plugins: [
       vue(),
-      css(), // Ajoutez cette ligne
+      css({
+        output: `assets/astrea-design-system-${version}.css`,
+      }),
       peerDepsExternal(),
       resolve({
         extensions: ['.js', '.jsx'],
